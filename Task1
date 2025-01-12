@@ -1,0 +1,41 @@
+
+import java.util.Scanner;
+
+public class john {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int number = scanner.nextInt();
+        if (number > 7) {
+            System.out.println("Hello");
+        }
+
+        System.out.print("Enter a name: ");
+        scanner.nextLine();
+        String name = scanner.nextLine();
+        if ("John".equalsIgnoreCase(name)) {
+            System.out.println("Hello, John");
+        } else {
+            System.out.println("There is no such name");
+        }
+
+        // Part 3: Output array elements that are multiples of 3
+        System.out.println("Enter the size of the array: ");
+        int size = scanner.nextInt();
+        int[] array = new int[size];
+
+        System.out.println("Enter the elements of the array: ");
+        for (int i = 0; i < size; i++) {
+            array[i] = scanner.nextInt();
+        }
+
+        System.out.println("Elements of the array that are multiples of 3:");
+        for (int element : array) {
+            if (element % 3 == 0) {
+                System.out.println(element);
+            }
+        }
+
+    }
+}
